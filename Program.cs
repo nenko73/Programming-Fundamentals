@@ -1,78 +1,62 @@
 ﻿using System;
 
-namespace TheatrePromotions
+namespace MounthPrinter
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            //   Day / Age   0 <= age <= 18  18 < age <= 64  64 < age <= 122
-            //   Weekday          12$	          18$	          12$
-            
-            
-            string dey=Console.ReadLine();
-            int age=int.Parse(Console.ReadLine());
-            switch (dey)
+            int mounth = int.Parse(Console.ReadLine());
+            if (mounth < 1 || mounth > 12)
             {
-                case "Weekday":
-                    if(age>=0&& age <= 18)
-                    {
-                        Console.WriteLine("12$");
-                    }
-                    else if (age>18&& age <= 64)
-                    {
-                        Console.WriteLine(  "18$");
-                    }
-                    else if (age>64&& age<=122)
-                    {
-                        Console.WriteLine("12$");
-                    }
-                    else
-                    {
-                        Console.WriteLine("Error!");  
-                    }
-                    break;
-                case "Weekend":
-                    //   Weekend          15$	          20$	          15$
-                    if (age >= 0 && age <= 18)
-                    {
-                        Console.WriteLine("15$");
-                    }
-                    else if (age>18&& age <= 64)
-                    {
-                        Console.WriteLine("20$");
-                    }
-                    else if (age>64&& age <= 122)
-                    {
-                        Console.WriteLine("15$");
-                    }
-                    else
-                    {
-                        Console.WriteLine("Error!");
-                    }
-                    break;
-                case "Holiday":
-                    //   Holiday          5$	          12$	          10$
-                    if (age >= 0 && age <= 18)
-                    {
-                        Console.WriteLine("5$");
-                    }
-                    else if (age>18 && age <= 64)
-                    {
-                        Console.WriteLine("12$");
-                    }
-                    else if (age>64&& age <= 122)
-                    {
-                        Console.WriteLine("10$");
-                    }
-                    else
-                    {
-                        Console.WriteLine("Error!");
-                    }
-                    break;
-                
+                Console.WriteLine("Error !");
             }
+            else
+            {                                                                                                                       
+                
+                
+                
 
+                switch (mounth)
+                {
+                    case 1:
+                        Console.WriteLine("January");
+                        break;
+                    case 2:
+                        Console.WriteLine("February");
+                        break;
+                    case 3:
+                        Console.WriteLine("March");
+                        break;
+                    case 4:
+                        Console.WriteLine("April");
+                        break;
+                    case 5:
+                        Console.WriteLine("May");
+                        break;
+                    case 6:
+                        Console.WriteLine("June");
+                        break;
+                    case 7:                           
+                        Console.WriteLine("July");
+                        break;
+                    case 8:
+                        Console.WriteLine("August");
+                        break;
+                    case 9:
+                        Console.WriteLine("September");
+                        break;
+                    case 10:
+                        Console.WriteLine("October");
+                        break;
+                    case 11:
+                        Console.WriteLine("November");
+                        break;
+                    case 12:
+                        Console.WriteLine("December");
+                        break;
+                }
+            }
         }
     }
 }
